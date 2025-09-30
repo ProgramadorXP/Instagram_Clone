@@ -2,7 +2,7 @@ export default function SettingsIcon() {
   return (
     <svg
       aria-label="Settings"
-      className="x1lliihq x1n2onr6 x5n08af cursor-pointer"
+      className="x1lliihq x1n2onr6 x5n08af cursor-pointer hidden md:block"
       fill="currentColor"
       height="24"
       role="img"

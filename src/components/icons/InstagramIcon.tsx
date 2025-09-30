@@ -2,7 +2,7 @@ export default function InstagramIcon() {
   return (
     <svg
       aria-label="Instagram"
-      className="x1lliihq x1n2onr6 x5n08af cursor-pointer"
+      className="x1lliihq x1n2onr6 x5n08af cursor-pointer hidden md:block"
       fill="currentColor"
       height="24"
       role="img"

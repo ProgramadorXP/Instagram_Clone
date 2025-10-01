@@ -8,7 +8,7 @@ import {
 
 export default function Stories() {
   return (
-    <Carousel className="w-full max-w-[628px]">
+    <Carousel className="w-full max-w-[628px] p-2">
       <CarouselContent className="-ml-2 md:-ml-4">
         {Array.from({ length: 10 }).map((_, index) => (
           <CarouselItem

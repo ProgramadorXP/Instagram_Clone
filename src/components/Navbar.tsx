@@ -1,3 +1,4 @@
+import { NavLink } from "react-router";
 import ExploreIcon from "./icons/ExploreIcon";
 import HomeIcon from "./icons/HomeIcon";
 import InstagramIcon from "./icons/InstagramIcon";
@@ -11,7 +12,7 @@ import SettingsIcon from "./icons/SettingsIcon";
 
 const styles = {
   topBar:
-    "fixed top-0 bg-white left-0 right-0 z-10 flex items-center justify-between px-4 py-3 border-b border-gray-300 md:hidden",
+    "fixed top-0 bg-white left-0 right-0 z-10 flex items-center justify-between p-2 border-b border-gray-300 md:hidden",
   topBarInner:
     "w-full flex flex-col xs:flex-row xs:items-center xs:justify-between gap-2",
   logo: "hidden xs:block font-bold text-lg",
@@ -19,7 +20,7 @@ const styles = {
   searchInput: "w-full border rounded-sm p-1 border-gray-700 bg-white",
   notification: "hidden xs:block",
   nav: `
-    fixed bottom-0 bg-white left-0 right-0 z-10 w-full border-t border-gray-300 flex px-4 py-3
+    fixed bottom-0 bg-white left-0 right-0 z-10 w-full border-t border-gray-300 flex p-2
     md:w-19 md:h-lvh md:flex-col md:items-center md:justify-between md:py-8 md:border-r md:border-t-0
     [@media(min-width:1264px)]:w-[245px] [@media(min-width:1264px)]:items-start
     `,
@@ -29,7 +30,7 @@ const styles = {
     [@media(min-width:1264px)]:items-start [@media(min-width:1264px)]:gap-2
   `,
   navItem:
-    "md:w-full flex items-center gap-3 cursor-pointer p-2 rounded-lg md:hover:bg-gray-100 transition",
+    "md:w-full flex items-center justify-center gap-3 cursor-pointer py-2 rounded-lg md:hover:bg-gray-100 transition",
   navText: "hidden [@media(min-width:1264px)]:inline font-medium",
   searchIcon: "hidden md:flex",
   navNotification: "hidden md:flex",
@@ -68,7 +69,9 @@ export default function Navbar() {
 
         <div className={styles.navIcons}>
           <div className={styles.navItem}>
-            <HomeIcon />
+            <NavLink to="/">
+              <HomeIcon />
+            </NavLink>
             <span className={styles.navText}>Home</span>
           </div>
 
@@ -103,11 +106,13 @@ export default function Navbar() {
           </div>
 
           <div className={styles.navItem}>
-            <img
-              src="https://i.pravatar.cc/150?img=5"
-              alt="profile"
-              className={styles.avatar}
-            />
+            <NavLink to="/profile" className="flex items-center gap-3">
+              <img
+                src="https://i.pravatar.cc/150?img=5"
+                alt="profile"
+                className={styles.avatar}
+              />
+            </NavLink>
             <span className={styles.navText}>Profile</span>
           </div>
 
